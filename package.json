@@ -1,0 +1,102 @@
+{
+  "name": "canonical--ui-library",
+  "version": "0.0.37-development",
+  "description": "Canonical UI Library",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "sideEffects": false,
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "asset-dev": "npx nodemon --exec 'npm run regen' /asset-inliner/src/index.js",
+    "asset-inline": "node asset-inliner/src/index.js --inline",
+    "asset-recycle": "node asset-inliner/src/index.js --recycle",
+    "asset-regen": "npm run recycle && npm run inline",
+    "build": "create-react-styleguide script build",
+    "build:watch": "create-react-styleguide script build:watch",
+    "build:styleguide": "create-react-styleguide script build:styleguide",
+    "clean": "create-react-styleguide script clean",
+    "lint": "create-react-styleguide script eslint",
+    "precommit": "pretty-quick --staged",
+    "start": "create-react-styleguide script start",
+    "test:ui": "npx cypress open",
+    "test:ui-headless": "npx cypress run",
+    "test:coverage": "",
+    "test:update": "",
+    "test:watch": "",
+    "release": "npx semantic-release",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release",
+    "prepublishOnly": "create-react-styleguide script prepublishOnly"
+  },
+  "dependencies": {
+    "codemirror": "^5.39.2",
+    "moment": "^2.22.2",
+    "nuka-carousel": "^4.3.6",
+    "postcss-media-minmax": "^3.0.0",
+    "postcss-nested": "^3.0.0",
+    "prop-types": "^15.6.2",
+    "rc-slider": "^8.6.1",
+    "rc-tooltip": "^3.7.2",
+    "react-codemirror2": "^5.1.0",
+    "react-datepicker": "^1.6.0",
+    "react-select": "^2.0.0",
+    "react-table": "^6.8.6",
+    "sanitize.css": "^5.0.0",
+    "styled-jsx": "^3.0.2",
+    "styled-jsx-plugin-postcss": "^0.1.3"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "base64-img": "^1.0.4",
+    "create-react-styleguide": "0.0.17",
+    "cypress": "^3.1.0",
+    "husky": "^1.0.0-rc.14",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.18.3",
+    "prettier": "1.14.2",
+    "pretty-quick": "^1.6.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "shelljs": "^0.8.2",
+    "webpack-blocks": "^1.0.0"
+  },
+  "author": {
+    "name": "Jeff Scott Ward",
+    "url": "https://www.twitter.com/jeffscottward"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeffscottward/canonical-ui-library.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "library",
+    "styled-jsx"
+  ],
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ],
+    "analyzeCommits": "@semantic-release/commit-analyzer",
+    "prepare": "@semantic-release/npm",
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
+}
