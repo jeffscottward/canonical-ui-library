@@ -72,7 +72,7 @@ How to start locally for development:
 (pre-reqs: node/npm, nvm, git)
 
 ```
-git clone git://github.com/quantstamp/qs-ui-library.git
+git clone git@github.com:jeffscottward/canonical-ui-library.git
 cd qs-ui-library
 nvm use
 npm i
