@@ -34,7 +34,7 @@
     "prepublishOnly": "create-react-styleguide script prepublishOnly"
   },
   "dependencies": {
-    "codemirror": "^5.39.2",
+    "codemirror": "^5.58.2",
     "moment": "^2.22.2",
     "nuka-carousel": "^4.3.6",
     "postcss-media-minmax": "^3.0.0",
