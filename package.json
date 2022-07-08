@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "codemirror": "^5.39.2",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "nuka-carousel": "^4.3.6",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
